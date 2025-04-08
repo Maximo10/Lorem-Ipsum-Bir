@@ -11,6 +11,7 @@
   max-width: 1400px;
   margin: 0 auto;
 }
+
 /* Encabezado */
 .header {
   display: flex;
@@ -47,9 +48,10 @@
   cursor: pointer;
   border-radius: 20px;
 }
+
 /* Sección Hero */
 .hero {
-  background-image: url("./Screenshot_1.png");
+  background-image: url("./Imag/Screenshot_1.png");
   height: 350px;
   display: flex;
   align-items: start;
@@ -77,6 +79,7 @@
     cursor: pointer;
     border-radius: 20px;
 }
+
 /* Sección Servicios */
 .serv {
   padding: 40px 0;
@@ -356,6 +359,8 @@
   line-height: 1.5;
   color: #555;
 }
+
+
 /* Footer General */
 .footer {
   background-color: #2c3e50;
@@ -413,4 +418,207 @@
   padding: 0 20px;
   color: #ddd;
   font-size: 0.9rem;
+}
+/* Media Queries */
+
+/*Dispositivos con pantalla muy pequeña */
+
+@media only screen and (max-width: 320px) {
+  .header nav button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  .hero {
+    height: 200px;
+    padding: 40px 10px;
+  }
+  .recla {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "area1"
+      "area2"
+      "area3"
+      "area4"
+      "area5"
+      "area6"
+      "area7"
+      "area8"
+      "area9";
+  }
+  .venta {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Móviles comunes – ancho aproximado entre 321px y 375px */
+@media (min-width: 321px) and (max-width: 375px) {
+  .header nav button {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+  .hero {
+    height: 240px;
+    padding: 60px 15px;
+  }
+  .recla {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "area1 area2"
+      "area3 area4"
+      "area5 area6"
+      "area7 area8"
+      "area9 area9";
+  }
+  .venta {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dispositivos móviles grandes – ancho aproximado entre 376px y 414px */
+
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+  .header nav button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  .hero {
+    height: 260px;
+    padding: 70px 15px;
+  }
+  .recla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .venta {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Móviles grandes / Pequeñas Tablets (576px <= ancho < 768px) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  .header nav button {
+    padding: 8px 18px;
+    font-size: 0.95rem;
+  }
+  .hero {
+    height: 280px;
+    padding: 70px 15px;
+  }
+  .recla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .venta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonials-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablets y dispositivos de pantalla mediana (768px <= ancho < 992px) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .header {
+    padding: 18px 15px;
+  }
+  .hero {
+    height: 320px;
+    padding: 80px 20px;
+  }
+  .recla {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "area1 area2 area3"
+      "area4 area5 area6"
+      "area7 area8 area9";
+  }
+  .venta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Escritorio pequeño (992px <= ancho < 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .header {
+    padding: 20px;
+  }
+  .hero {
+    height: 350px;
+    padding: 100px 20px;
+  }
+  .recla {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .venta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Escritorio mediano (1200px <= ancho < 1400px) */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .conte {
+    max-width: 1200px;
+  }
+  .header {
+    padding: 25px 20px;
+  }
+  .hero {
+    height: 380px;
+    padding: 110px 25px;
+  }
+  .recla {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .venta {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Escritorio grande (ancho >= 1400px) */
+@media only screen and (min-width: 1400px) {
+  .conte {
+    max-width: 1400px;
+  }
+  .header {
+    padding: 30px 25px;
+  }
+  .hero {
+    height: 400px;
+    padding: 120px 30px;
+  }
+  .recla {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .venta {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-container {
+    padding: 0 40px;
+  }
 }
